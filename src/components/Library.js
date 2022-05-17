@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import Shelf from './Shelf';
 
-const Library = ({ books }) => {
+const Library = ({ books, updateBook }) => {
 	return (
 		<>
 			<Shelf

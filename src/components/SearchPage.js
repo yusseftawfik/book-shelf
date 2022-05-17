@@ -13,10 +13,6 @@ const SearchPage = () => {
 		};
 		getQuery();
 	}, [query]);
-	const showAll = async () => {
-		setQueryResult('');
-		setQuery('');
-	};
 	return (
 		<>
 			<div className='search-navbar'>
@@ -34,7 +30,6 @@ const SearchPage = () => {
 				{queryResult && queryResult.error ? (
 					<div className='no-result'>
 						No result Found
-						<button onClick={() => showAll()}>SHOW ALL</button>
 					</div>
 				) : queryResult ? (
 					queryResult.map((book, index) => <Book key={index} data={book} />)
