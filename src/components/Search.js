@@ -1,18 +1,13 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
 import '../styles/category.css';
 
-const Search = ({ showSearchPage }) => {
+const Search = () => {
 	return (
 		<>
-			<div className='search-btn' onClick={() => showSearchPage(true)}>
+			<div className='search-btn'>
 			</div>
 		</>
 	)
-}
-
-Search.prototype = {
-	showSearchPage: PropTypes.func.isRequired
 }
 
 export default Search

@@ -1,13 +1,9 @@
 import React from "react";
-import { PropTypes } from 'prop-types';
 import { Link } from "react-router-dom";
-import * as apiFunctions from "../API";
+import { PropTypes } from "prop-types";
 import "../styles/book.css";
 
-const Book = ({ data }) => {
-	const updateBook = (book, shelf) => {
-		apiFunctions.update(book, shelf);
-	};
+const Book = ({ data, updateBook }) => {
 	return (
 		<>
 			<div className="book">
@@ -31,7 +27,7 @@ const Book = ({ data }) => {
 							<div className="book-shelf-changer">
 								<select
 									defaultValue={data.shelf ? data.shelf : "none"}
-									onChange={e => updateBook(data, e.target.value)}
+									onChange={(e) => updateBook(data, e.target.value)}
 								>
 									<option value="none" disabled>
 										Move to...
@@ -57,7 +53,7 @@ const Book = ({ data }) => {
 };
 
 Book.proptype = {
-	data: PropTypes.object
+	data: PropTypes.object,
 };
 
 export default Book;

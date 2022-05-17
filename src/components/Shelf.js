@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import Book from "./Book";
 import "../styles/category.css";
 
-const Shelf = ({ books, category, status }) => {
+const Shelf = ({ books, category, status, updateBook }) => {
 	return (
 		<>
 			<div className="category-container">
@@ -12,7 +12,7 @@ const Shelf = ({ books, category, status }) => {
 					{books &&
 						books
 							.filter((book) => book.shelf === status)
-							.map((book, index) => <Book data={book} key={index} />)}
+							.map((book, index) => <Book data={book} key={index} updateBook={updateBook} />)}
 				</div>
 			</div>
 		</>
@@ -22,7 +22,8 @@ const Shelf = ({ books, category, status }) => {
 Shelf.propTypes = {
 	books: PropTypes.array.isRequired,
 	category: PropTypes.string.isRequired,
-	status: PropTypes.string.isRequired
+	status: PropTypes.string.isRequired,
+	updateBook: PropTypes.func.isRequired,
 }
 
 export default Shelf;

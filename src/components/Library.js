@@ -7,16 +7,19 @@ const Library = ({ books, updateBook }) => {
 		<>
 			<Shelf
 				books={books}
+				updateBook={updateBook}
 				category={'Currently Reading'}
 				status={'currentlyReading'}
 			/>
 			<Shelf
 				books={books}
+				updateBook={updateBook}
 				category={'Want to Read'}
 				status={'wantToRead'}
 			/>
 			<Shelf
 				books={books}
+				updateBook={updateBook}
 				category={'Read'}
 				status={'read'}
 			/>
@@ -25,7 +28,8 @@ const Library = ({ books, updateBook }) => {
 }
 
 Library.prototype = {
-	books: PropTypes.array.isRequired
+	books: PropTypes.array.isRequired,
+	updateBook: PropTypes.func.isRequired,
 }
 
 export default Library;

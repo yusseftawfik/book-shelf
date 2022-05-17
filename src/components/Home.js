@@ -1,33 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
-import * as apiFunctions from "../API";
 import Navbar from "./Navbar";
 import Library from "./Library";
 import Search from "./Search";
 
-const Home = () => {
-	const [result, setResult] = useState("");
-	useEffect(() => {
-		const getData = async () => {
-			await apiFunctions.getAll().then((res) => setResult(res));
-		};
-		getData();
-	}, []);
-	// const updateBook = (book, shelf) => {
-	// 	book.shelf = shelf
-	// 	apiFunctions.update(book, shelf).then(() => {
-	// 		setResult([...result.filter(b => b.id !== book.id), book])
-	// 	})
-	// }
+const Home = ({ books, updateBook }) => {
 	return (
 		<>
 			<Navbar />
-			<Library books={result} />
-			<Link to='/'>
+			<Library books={books} updateBook={updateBook} />
+			<Link to='/search'>
 				<Search />
 			</Link>
 		</>
 	);
 };
+
+Home.prototype = {
+	books: PropTypes.array.isRequired,
+	updateBook: PropTypes.func.isRequired,
+}
 
 export default Home;
