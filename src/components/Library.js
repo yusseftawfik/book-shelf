@@ -1,4 +1,5 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import Shelf from './Shelf';
 
 const Library = ({ books }) => {
@@ -21,6 +22,10 @@ const Library = ({ books }) => {
 			/>
 		</>
 	)
+}
+
+Library.prototype = {
+	books: PropTypes.array.isRequired
 }
 
 export default Library;

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import * as apiFunctions from '../API';
 import Book from './Book';
-import Spinner from './spinner';
 import '../styles/searchpage.css';
 
 const SearchPage = () => {
@@ -21,7 +20,7 @@ const SearchPage = () => {
 	return (
 		<>
 			<div className='search-navbar'>
-				<Link to='/'>
+				<Link to='home'>
 					<div className='back-btn'></div>
 				</Link>
 				<input

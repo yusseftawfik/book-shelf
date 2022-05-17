@@ -12,12 +12,18 @@ const Home = () => {
 			await apiFunctions.getAll().then((res) => setResult(res));
 		};
 		getData();
-	}, [result]);
+	}, []);
+	// const updateBook = (book, shelf) => {
+	// 	book.shelf = shelf
+	// 	apiFunctions.update(book, shelf).then(() => {
+	// 		setResult([...result.filter(b => b.id !== book.id), book])
+	// 	})
+	// }
 	return (
 		<>
 			<Navbar />
 			<Library books={result} />
-			<Link to='search'>
+			<Link to='/'>
 				<Search />
 			</Link>
 		</>

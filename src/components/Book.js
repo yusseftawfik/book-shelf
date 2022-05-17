@@ -1,4 +1,5 @@
 import React from "react";
+import { PropTypes } from 'prop-types';
 import { Link } from "react-router-dom";
 import * as apiFunctions from "../API";
 import "../styles/book.css";
@@ -53,6 +54,10 @@ const Book = ({ data }) => {
 			</div>
 		</>
 	);
+};
+
+Book.proptype = {
+	data: PropTypes.object
 };
 
 export default Book;
