@@ -1,20 +1,35 @@
-import React from 'react';
-import CurrentlyReading from "./CurrentlyReading";
+import React, { useEffect, useState } from "react";
+import * as apiFunctions from "../API";
+import SearchPage from "./SearchPage";
 import Navbar from "./Navbar";
-import Read from "./Read";
+import Library from "./Library";
 import Search from "./Search";
-import WantToRead from "./WantToRead";
 
 const Home = () => {
+	const [search, setSearch] = useState(false);
+	const [result, setResult] = useState("");
+	const showSearchPage = (value) => {
+		setSearch(value);
+	};
+	useEffect(() => {
+		const getData = async () => {
+			await apiFunctions.getAll().then((res) => setResult(res));
+		};
+		getData();
+	}, [result]);
 	return (
 		<>
-			<Navbar />
-			<CurrentlyReading />
-			<WantToRead />
-			<Read />
-			<Search />
+			{search ? (
+				<SearchPage showSearchPage={showSearchPage} />
+			) : (
+				<>
+					<Navbar />
+					<Library books={result} />
+					<Search showSearchPage={showSearchPage} />
+				</>
+			)}
 		</>
-	)
-}
+	);
+};
 
-export default Home
+export default Home;

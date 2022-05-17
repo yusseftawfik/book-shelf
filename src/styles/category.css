@@ -12,7 +12,7 @@
   z-index: 100;
 }
 .category-container {
-  padding: 10px 50px;
+  padding: 0px 200px;
 }
 .category-title {
   font-weight: 700;
@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: center;
   flex-flow: wrap row;
+  min-height: 100px;
 }
 .search-btn {
   width: 40px;
@@ -46,4 +47,15 @@
   background: #60ac5d;
   background-image: url(../assets/add.svg);
   transition-duration: 0.25s;
+}
+.empty-shelf {
+  color: #2a7e2e50;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 10vh;
+  font-style: italic;
+  font-weight: 900;
 }

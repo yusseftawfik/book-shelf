@@ -48,16 +48,8 @@ export const BookDetails = () => {
 									</div>
 								</a>
 								<div className="author">
-									by:
 									{book.authors
-										? book.authors.map((author) => {
-											return (
-												<>
-													{author}
-													<br />
-												</>
-											);
-										})
+										? book.authors.join(' & ')
 										: null}
 								</div>
 							</div>

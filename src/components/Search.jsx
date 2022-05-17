@@ -1,16 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/category.css';
 
-
-
-const Search = () => {
+const Search = ({ showSearchPage }) => {
 	return (
 		<>
-			<Link to='search'>
-				<div className='search-btn'>
-				</div>
-			</Link>
+			<div className='search-btn' onClick={() => showSearchPage(true)}>
+			</div>
 		</>
 	)
 }

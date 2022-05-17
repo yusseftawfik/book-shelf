@@ -49,3 +49,10 @@
 .no-result button:hover {
   color: blue;
 }
+.back-btn {
+  width: 50px;
+  height: 35px;
+  background-image: url(../assets//arrow-back.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
