@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/book-shelf/static/css/main.d0ebbfda.css",
+    "main.js": "/book-shelf/static/js/main.2bcac4ec.js",
+    "index.html": "/book-shelf/index.html",
+    "static/media/arrow-back.svg": "/book-shelf/static/media/arrow-back.cd079cab42defead9875f9270c5ad67c.svg",
+    "static/media/add.svg": "/book-shelf/static/media/add.1b5d9b6afb5557f7992c.svg",
+    "static/media/arrow-drop-down.svg": "/book-shelf/static/media/arrow-drop-down.4378492a3a09dbfc31ff.svg",
+    "main.d0ebbfda.css.map": "/book-shelf/static/css/main.d0ebbfda.css.map",
+    "main.2bcac4ec.js.map": "/book-shelf/static/js/main.2bcac4ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0ebbfda.css",
+    "static/js/main.2bcac4ec.js"
+  ]
+}
