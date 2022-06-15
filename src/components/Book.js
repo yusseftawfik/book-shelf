@@ -11,7 +11,7 @@ const Book = ({ data, updateBook }) => {
 					<>
 						<div className="book-top">
 							{data.imageLinks ? (
-								<Link to={`book/${data.id}`}>
+								<Link to={`/book-shelf/book/${data.id}`}>
 									<div
 										className="book-cover"
 										style={{
@@ -20,7 +20,7 @@ const Book = ({ data, updateBook }) => {
 									></div>
 								</Link>
 							) : (
-								<Link to={`book/${data.id}`}>
+									<Link to={`/book-shelf/book/${data.id}`}>
 									<div className="no-photo">No Book Cover</div>
 								</Link>
 							)}

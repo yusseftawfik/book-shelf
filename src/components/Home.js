@@ -10,7 +10,7 @@ const Home = ({ books, updateBook }) => {
 		<>
 			<Navbar />
 			<Library books={books} updateBook={updateBook} />
-			<Link to='/search'>
+			<Link to='/book-shelf/search'>
 				<Search />
 			</Link>
 		</>

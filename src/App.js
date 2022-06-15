@@ -23,10 +23,10 @@ function App () {
     <>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Home books={result} updateBook={updateBook} />} />
-          <Route exact path="/search" element={<SearchPage books={result} updateBook={updateBook} />} />
-          <Route exact path="/book/:id" element={<BookDetails />} />
-          <Route exact path="/search/book/:id" element={<BookDetails />} />
+          <Route exact path="/book-shelf" element={<Home books={result} updateBook={updateBook} />} />
+          <Route exact path="/book-shelf/search" element={<SearchPage books={result} updateBook={updateBook} />} />
+          <Route exact path="/book-shelf/book/:id" element={<BookDetails />} />
+          <Route exact path="/book-shelf/search/book/:id" element={<BookDetails />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -17,7 +17,7 @@ export const BookDetails = () => {
 	return (
 		<>
 			<div className="search-navbar">
-				<Link to="/search">
+				<Link to="/book-shelf/search">
 					<img src={back} alt="back" width="50" height="35" />
 				</Link>
 				<div className="categories">

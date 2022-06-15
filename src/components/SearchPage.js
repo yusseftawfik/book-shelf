@@ -17,7 +17,7 @@ const SearchPage = ({ books, updateBook }) => {
 	return (
 		<>
 			<div className="search-navbar">
-				<Link to="/">
+				<Link to="/book-shelf">
 					<div className="back-btn"></div>
 				</Link>
 				<input
